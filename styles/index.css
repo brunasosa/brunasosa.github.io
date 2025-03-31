@@ -125,8 +125,8 @@ button a, button a:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 6em;
-    margin-bottom: 6em;
+    margin-top: 10em;
+    margin-bottom: 10em;
 }
 
 .project {

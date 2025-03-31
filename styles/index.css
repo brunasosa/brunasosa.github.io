@@ -110,12 +110,10 @@ button a:hover {
 
 .navbar {
     position: sticky;
-    display: block;
     top: 0;
     margin: 3em 0 3em 0;
-    /* background-image: linear-gradient(to top, rgba(255,0,0,0), var(--darker)); */
     background-color: var(--darker);
-    height: auto;
+    height: 2.5em;
     z-index: 9999;
 }
 
@@ -303,6 +301,12 @@ footer {
     header h1 {
         margin-top: 2em;
     }
+
+    /* .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    } */
 }
 
 @media (max-width: 600px) {

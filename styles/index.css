@@ -1,5 +1,5 @@
 :root {
-    --darker:  rgb(20, 20, 20);
+    --darker: rgb(20, 20, 20);
     --grey: rgb(122, 122, 122);
     --white: rgb(233, 233, 233);
     --blue: rgb(45, 195, 206);
@@ -29,14 +29,16 @@ header h1 {
     margin-top: 5em;
 }
 
-header p, header button {
+header p,
+header button {
     font-size: 28px;
 
 }
+
 header button {
     margin-bottom: 10em;
-    position:relative;
-    z-index:9999;
+    position: relative;
+    z-index: 9999;
 }
 
 body {
@@ -61,47 +63,49 @@ h1 {
     margin: 0;
 }
 
-body > h1 {
+body>h1 {
     background-color: var(--red);
     min-height: 2em;
     padding-top: 0.6em;
 
 }
 
-body > h1:nth-of-type(odd) {
+body>h1:nth-of-type(odd) {
     background-color: var(--red);
 }
 
-body > h1:nth-of-type(even) {
+body>h1:nth-of-type(even) {
     background-color: var(--blue);
     color: white;
 }
 
 button {
     background-color: var(--blue);
-    border:1px solid var(--darker);
+    border: 1px solid var(--darker);
     font-size: large;
     padding: 0.5em;
     border-radius: 16px;
     box-shadow: 5px 5px;
     cursor: pointer;
-    
+
 }
 
-button:hover{
+button:hover {
     background-color: var(--red);
     transition: 0.2s;
-    
+
 }
 
 button:active {
     box-shadow: none;
     background-color: var(--pink);
 }
-button a, button a:hover {
+
+button a,
+button a:hover {
     color: var(--darker);
     text-decoration: none;
-    
+
 }
 
 .navbar {
@@ -147,8 +151,8 @@ button a, button a:hover {
     border-radius: 12px;
     object-fit: cover;
     object-position: 0 100%;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1), rgba(0,0,0,1) 100%);
-    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1), rgba(0,0,0,1) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 100%);
 }
 
 .project-body {
@@ -175,13 +179,21 @@ footer {
 
 .fade-in-fade-out {
     animation-name: fade-in-fade-out;
-	animation-duration: 2s;
+    animation-duration: 2s;
 }
 
 @keyframes fade-in-fade-out {
-    0% {opacity: 0%;}
-    20% {opacity: 100%;}
-    100% {opacity: 0%;}
+    0% {
+        opacity: 0%;
+    }
+
+    20% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
 }
 
 #alertCopied {
@@ -224,7 +236,7 @@ footer {
     margin-left: 5px;
 }
 
-.container-socials img { 
+.container-socials img {
     border-radius: 50%;
     height: 80px;
     background-color: var(--blue);
@@ -232,25 +244,25 @@ footer {
     box-shadow: 5px 5px var(--darker);
 }
 
-.container-socials img:hover { 
+.container-socials img:hover {
     background-color: var(--red);
     transition: 0.2s;
 }
 
 #container-contact {
-    background-image: url("/img/parallax/parallax4.png"), url("/img/parallax/parallax3.png"), url("/img/parallax/parallax2.png"),url("/img/parallax/parallax1.png");
+    background-image: url("/img/parallax/parallax4.png"), url("/img/parallax/parallax3.png"), url("/img/parallax/parallax2.png"), url("/img/parallax/parallax1.png");
     background-size: 110%, 110%, 110%, cover;
     background-position: center, top, top, bottom;
     margin: 0;
     padding: 4em;
-    height: 500px;
+    min-height: 500px;
 }
 
 #container-contact p {
     font-size: 24px;
     margin-top: 4em;
     text-shadow: 2px 2px var(--darker);
-    background-image: linear-gradient(to right, rgba(255,0,0,0), var(--darker), rgba(255,0,0,0));
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), var(--darker), rgba(255, 0, 0, 0));
 }
 
 #container-aboutme {
@@ -274,17 +286,36 @@ footer {
     max-width: 600px;
 }
 
+@media (max-width: 400px) {
+    .project img {
+        width: 100%;
+    }
+
+    .container-socials img {
+        height: 60px;
+    }
+
+    header {
+        height: 640px;
+    }
+
+    header h1 {
+        margin-top: 2em;
+    }
+}
+
 @media (max-width: 600px) {
     #container-contact {
         background-size: cover;
     }
+
     .project-body {
-    width: auto;
+        width: auto;
     }
 }
 
 @media (min-width: 960px) {
     .project-body {
-width: 500px;
+        width: 500px;
     }
 }

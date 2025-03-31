@@ -1,11 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Bruna Sosa" />
+    <meta name="description" content="Front end developer portfolio" />
+    <title>Bruna Sosa</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/cursorParticles.css">
 </head>
+
 <body>
-    
+
+    <header onmousemove="particleEffects(event)">
+        <h1>
+            Hello, I'm Bruna Sosa!
+        </h1>
+        <p>
+            I'm a 2D game artist, illustrator and front-end web developer
+        </p>
+        <button><a href="#projects">Check some of my work!</a></button>
+    </header>
+
+    <div class="navbar">
+        <a href="#aboutMe">About me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contactMe">Contact</a>
+    </div>
+
+    <h1 id="aboutMe">About me</h1>
+    <div id="container-aboutme">
+        <img src="https://bluerune.github.io/img/IMG_20230104_151050.png" alt="" />
+        <p>
+            My name is Bruna, I'm a front end developer student from Uruguay currently looking for work!
+            <br>
+            My experience includes illustrations and UX/UI for video games, social media and marketing.
+            <br>
+            I’m looking forward to integrate my passion for design on web development!
+        </p>
+
+        <span>
+            <p>My skills: HTML, CSS and JavaScript | C# | Bootstrap | jQuery</p>
+            <p>Tools: GitHub Repositories | Adobe Photoshop and Illustrator | Figma | Unity </p>
+            <p><a href="https://www.linkedin.com/in/bruna-sosa/details/certifications/">Certifications:</a> Jóvenes a
+                programar - Introduction to web development | Code Coven - Introduction to game development on Unity</p>
+        </span>
+    </div>
+    <h1 id="projects">Projects</h1>
+    <div class="container-projects">
+        <div class="project">
+            <img src="https://images-assets.nasa.gov/image/PIA25163/PIA25163~medium.jpg" alt="">
+            <div class="project-body">
+                <h2><a href="https://brunasosa.github.io/buscador-galaxias/" target="_blank">Nasa Image Search</a></h2>
+                <p>Search documents and images on the NASA API</p>
+                <h3>Technologies used</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap</li>
+                    <li>API connection</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="project">
+            <img src="https://img.itch.zone/aW1nLzEyNTY0MzYyLnBuZw==/original/h18V%2F%2F.png" alt="">
+            <div class="project-body">
+                <h2><a href="https://bluerune.itch.io/dollmaker" target="_blank">Doll Maker: By BlueRune</a></h2>
+                <p>My dess up browser game!</p>
+                <h3>Technologies used</h3>
+                <ul>
+                    <li>C#</li>
+                    <li>Unity</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 id="contactMe">Contact me</h1>
+    <div id="container-contact" onmousemove="parallax(event)">
+        <p>Have a project in mind? <br> Let's get in touch!</p>
+        <div class="email">
+            <img src="/img/icons/icon_mail.png" alt="" />
+            <a href="mailto:b.sofia.sosa@gmail.com">
+                b.sofia.sosa@gmail.com
+            </a>
+            <button onclick="copyToClipboard()">Copy</button>
+            <span id="alertCopied">Copied!</span>
+        </div>
+
+        <div class="container-socials">
+            <a href="https://www.linkedin.com/in/bruna-sosa/" target="_blank"><img
+                    src="img/icons/socialslogos_linkedin.png" alt="My LinkedIn profile"></a>
+            <a href="https://github.com/brunasosa" target="_blank"><img src="img/icons/socialslogos_github.png"
+                    alt="My GitHub profile"></a>
+        </div>
+    </div>
+    <footer>
+        <p>Made by Bruna Sosa</p>
+    </footer>
+    <script src="/scripts/copytocplipboard.js"></script>
+    <script src="/scripts/cursorParticles.js"></script>
+    <script src="scripts/parallax.js"></script>
 </body>
+
 </html>

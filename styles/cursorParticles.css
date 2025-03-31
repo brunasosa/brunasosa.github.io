@@ -1,0 +1,28 @@
+.particle {
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 2px;
+    /* background-color: red; */
+    border: 1px solid var(--white);
+    clip-path: polygon(40% 40%, 50% 0, 60% 40%, 80% 50%, 60% 65%, 50% 100%, 40% 65%, 20% 50%);
+    filter: saturate(1000%);
+    transform: translate(-50%, -50%);
+    animation: animate 0.7s ease forwards;
+    
+}
+
+@keyframes animate {
+    0%{
+        height: 0;
+        width: 0;
+    }
+
+    50% {
+        border-width: 15px;
+    }
+
+    100% {
+        filter: blur(12px);
+    }
+}

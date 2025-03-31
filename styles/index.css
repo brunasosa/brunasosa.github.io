@@ -1,0 +1,277 @@
+:root {
+    --darker:  rgb(20, 20, 20);
+    --grey: rgb(122, 122, 122);
+    --white: rgb(233, 233, 233);
+    --blue: rgb(45, 195, 206);
+    --red: rgb(201, 40, 80);
+    --dark: rgb(44, 44, 44);
+    --lavander: rgb(202, 149, 245);
+    --pink: rgb(248, 146, 197);
+    --babyblue: rgb(135, 212, 248);
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header {
+    height: 800px;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(to bottom right, var(--lavander), var(--babyblue), var(--pink));
+}
+
+header h1 {
+    font-size: 56px;
+    margin-top: 5em;
+}
+
+header p, header button {
+    font-size: 28px;
+
+}
+header button {
+    margin-bottom: 10em;
+    position:relative;
+    z-index:9999;
+}
+
+body {
+    background-color: var(--darker);
+    color: var(--white);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--blue);
+}
+
+a:hover {
+    color: var(--red);
+    transition: 0.2s;
+}
+
+h1 {
+    margin: 0;
+}
+
+body > h1 {
+    background-color: var(--red);
+    min-height: 2em;
+    padding-top: 0.6em;
+
+}
+
+body > h1:nth-of-type(odd) {
+    background-color: var(--red);
+}
+
+body > h1:nth-of-type(even) {
+    background-color: var(--blue);
+}
+
+button {
+    background-color: var(--blue);
+    border:1px solid var(--darker);
+    font-size: large;
+    padding: 0.5em;
+    border-radius: 16px;
+    box-shadow: 5px 5px;
+    cursor: pointer;
+    
+}
+
+button:hover{
+    background-color: var(--red);
+    transition: 0.2s;
+    
+}
+
+button:active {
+    box-shadow: none;
+    background-color: var(--pink);
+}
+button a, button a:hover {
+    color: var(--darker);
+    text-decoration: none;
+    
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    margin: 3em 0 3em 0;
+    /* background-image: linear-gradient(to top, rgba(255,0,0,0), var(--darker)); */
+    background-color: var(--darker);
+}
+
+.navbar a {
+    font-size: 26px;
+    padding: 0.5em;
+    text-shadow: 2px 2px var(--darker);
+}
+
+.container-projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--white);
+    border-radius: 12px;
+    margin: 1em;
+}
+
+.project img {
+    width: 400px;
+    height: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: 0 100%;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1), rgba(0,0,0,1) 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1), rgba(0,0,0,1) 100%);
+}
+
+.project-body {
+    display: block;
+    text-align: left;
+}
+
+.project:hover {
+    transition: 0.3s;
+    background-color: var(--red);
+    cursor: pointer;
+}
+
+footer {
+    height: 40px;
+    color: var(--grey);
+}
+
+.fade-in-fade-out {
+    animation-name: fade-in-fade-out;
+	animation-duration: 2s;
+}
+
+@keyframes fade-in-fade-out {
+    0% {opacity: 0%;}
+    20% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+#alertCopied {
+    background-color: rgb(45, 195, 206);
+    margin-left: 18em;
+    margin-bottom: 4em;
+    border-radius: 15px;
+    padding: 0.5em;
+    position: absolute;
+    opacity: 0%;
+
+}
+
+
+.email {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+.email a {
+    background-color: var(--darker);
+    padding: 0.8em 0.8em 0.8em 0;
+    border-radius: 0  50px 50px 0;
+}
+
+.email img {
+    width: 25px;
+    border-radius: 50px 0 0 50px;
+    background-color: var(--darker);
+    padding: 0.62em;
+}
+
+.email button {
+    margin-left: 5px;
+}
+
+.container-socials img { 
+    border-radius: 50%;
+    height: 80px;
+    background-color: var(--blue);
+    margin: 1em;
+    box-shadow: 5px 5px var(--darker);
+}
+
+.container-socials img:hover { 
+    background-color: var(--red);
+    transition: 0.2s;
+}
+
+#container-contact {
+    background-image: url("/img/parallax/parallax4.png"), url("/img/parallax/parallax3.png"), url("/img/parallax/parallax2.png"),url("/img/parallax/parallax1.png");
+    background-size: 110%, 110%, 110%, cover;
+    background-position: center, top, top, bottom;
+    margin: 0;
+    padding: 4em;
+    height: 500px;
+}
+
+#container-contact p {
+    font-size: 24px;
+    margin-top: 4em;
+    text-shadow: 2px 2px var(--darker);
+    background-image: linear-gradient(to right, rgba(255,0,0,0), var(--darker), rgba(255,0,0,0));
+}
+
+#container-aboutme {
+    margin-top: 8em;
+    margin-bottom: 8em;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-aboutme img {
+    height: 300px;
+    margin: 1em;
+    border-radius: 50%;
+    box-shadow: 5px 5px var(--red);
+}
+
+#container-aboutme p {
+    max-width: 500px;
+}
+
+@media (max-width: 600px) {
+    #container-contact {
+        background-size: cover;
+    }
+    .project-body {
+    width: auto;
+    }
+}
+
+@media (min-width: 960px) {
+    .project-body {
+width: 500px;
+    }
+}

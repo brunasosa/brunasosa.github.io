@@ -74,6 +74,7 @@ body > h1:nth-of-type(odd) {
 
 body > h1:nth-of-type(even) {
     background-color: var(--blue);
+    color: white;
 }
 
 button {
